@@ -8,6 +8,10 @@ This repo is used to create presto cluster in Kubernetes.
 
 2. Presto's etc configs，catalog configs and core-site.xml are all integrated in the CR of PrestoClusters, please refer to the samplae  [prestooperator_v1alpha1_prestocluster.yaml](config/samples/prestooperator_v1alpha1_prestocluster.yaml).
 
+# Prerequisites
+
+* Kubernetes >= v1.11
+
 ### Run and Deploy
 
 ```
@@ -59,11 +63,10 @@ presto-test-cluster-worker-54bd79b57c-k6pz6        1/1     Running     0        
 presto-test-cluster-worker-54bd79b57c-pchdx        1/1     Running     0          42m
 ```
 
-### Notice about the PrestoClusters's Yaml(onfig/samples/prestooperator_v1alpha1_prestocluster.yaml)
-```
-All the configs under the spec.coordinatorConfig.etcConfig will be mounted to /usr/lib/presto/etc in the Presto Coordinator's container.
-All the configs under the spec.workerConfig.etcConfig will be mounted to /usr/lib/presto/etc in the Presto Workers's container.
-All the configs under the spec.catalogConfig will be mounted to /usr/lib/presto/catalog/etc/catalog both in the
-Presto Coordinator's container and Workers's container.
-All the configs under the spec.coresit will be mounted to the /tmp both in the Presto Coordinator's container and Workers's container.
-```
+### Notice about the PrestoClusters's Yaml [prestooperator_v1alpha1_prestocluster.yaml](config/samples/prestooperator_v1alpha1_prestocluster.yaml).
+
+* All the configs under the spec.coordinatorConfig.etcConfig will be mounted to /usr/lib/presto/etc in the Presto Coordinator's container.
+* All the configs under the spec.workerConfig.etcConfig will be mounted to /usr/lib/presto/etc in the Presto Workers's container.
+* All the configs under the spec.catalogConfig will be mounted to /usr/lib/presto/catalog/etc/catalog both in the
+* Presto Coordinator's container and Workers's container.
+* All the configs under the spec.coresit will be mounted to the /tmp both in the Presto Coordinator's container and Workers's container.
