@@ -67,6 +67,6 @@ presto-test-cluster-worker-54bd79b57c-pchdx        1/1     Running     0        
 
 * All the configs under the spec.coordinatorConfig.etcConfig will be mounted to /usr/lib/presto/etc in the Presto Coordinator's container.
 * All the configs under the spec.workerConfig.etcConfig will be mounted to /usr/lib/presto/etc in the Presto Workers's container.
-* All the configs under the spec.catalogConfig will be mounted to /usr/lib/presto/catalog/etc/catalog both in the
+* All the configs under the spec.catalogConfig will be mounted to /usr/lib/presto/etc/catalog in the
 * Presto Coordinator's container and Workers's container.
 * All the configs under the spec.coresit will be mounted to the /tmp both in the Presto Coordinator's container and Workers's container.
