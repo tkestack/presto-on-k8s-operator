@@ -7,7 +7,6 @@ spec:
   name: presto-test-cluster
   image: dlc2020tencent/dlc:v2
   workers: 2
-  test: test
   coordinatorConfig:
     resources:
       requests:
